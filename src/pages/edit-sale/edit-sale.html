@@ -1,0 +1,32 @@
+<!--
+  Generated template for the EditSalePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Editar Venda</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Comprador</ion-label>
+      <ion-input [(ngModel)]="sale.buyer" placeholder="Mauro"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Item</ion-label>
+      <ion-input [(ngModel)]="sale.itemName" placeholder="Brigadeiro"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Quantidade</ion-label>
+      <ion-input [(ngModel)]="sale.quantity" placeholder="1"></ion-input>
+    </ion-item>
+  </ion-list>
+  <button ion-button block clear (click)="editSale(sale)">Salvar</button>
+</ion-content>
