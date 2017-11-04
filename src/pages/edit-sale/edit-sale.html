@@ -16,16 +16,16 @@
 <ion-content>
   <ion-list>
     <ion-item>
-      <ion-label>Comprador</ion-label>
-      <ion-input [(ngModel)]="sale.buyer" placeholder="Mauro"></ion-input>
+      <ion-label color="primary" stacked>Comprador</ion-label>
+      <ion-input [(ngModel)]="sale.buyer"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Item</ion-label>
-      <ion-input [(ngModel)]="sale.itemName" placeholder="Brigadeiro"></ion-input>
+      <ion-label color="primary" stacked>Produto</ion-label>
+      <ion-input [(ngModel)]="sale.itemName"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Quantidade</ion-label>
-      <ion-input [(ngModel)]="sale.quantity" placeholder="1"></ion-input>
+      <ion-label color="primary" stacked>Quantidade</ion-label>
+      <ion-input [(ngModel)]="sale.quantity"></ion-input>
     </ion-item>
   </ion-list>
   <button ion-button block clear (click)="editSale(sale)">Salvar</button>
