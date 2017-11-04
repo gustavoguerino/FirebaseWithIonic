@@ -1,25 +1,17 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, ToastController } from 'ionic-angular';
+
 import { Sale } from './../../models/sale/sale.model';
-import { AngularFireDatabase } from "angularfire2/database";
-import { AngularFireAuth } from "angularfire2/auth";
 import { Observable } from 'rxjs/Observable';
 
 import { UserService } from './../../services/user/user.service';
 import { SalesListService } from './../../services/sales-list/sales-list.service';
-/**
- * Generated class for the HomePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
   providers: [
-    AngularFireDatabase
   ]
 })
 export class HomePage {
@@ -39,7 +31,7 @@ export class HomePage {
   }
   async signOut(){
     try {
-      const result = await this.userService.logout();
+      await this.userService.logout();
       this.navCtrl.setRoot('LoginPage');
     }
     catch(error){
